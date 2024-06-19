@@ -37,7 +37,7 @@ let fovS = 68;
 let betaX = 0, betaY = 0, betaZ = 0;
 
 // device orientation
-let deviceAlpha, deviceBeta, deviceGamma;
+let deviceAlpha = 0, deviceBeta = 0, deviceGamma = 0;
 
 // boost orientation
 // let boostAlpha = 0, boostBeta = 90, boostGamma = 0;
@@ -164,15 +164,15 @@ function init() {
 }
 
 
-// function handleOrientation(event) {
-// 	const absolute = event.absolute;
-// 	deviceAlpha = event.alpha;
-// 	deviceBeta = event.beta;
-// 	deviceGamma = event.gamma;
+ function handleOrientation(event) {
+ 	const absolute = event.absolute;
+ 	deviceAlpha = event.alpha;
+ 	deviceBeta = event.beta;
+ 	deviceGamma = event.gamma;
   
-// 	// Do stuff with the new orientation data
-// 	setInfo(`Orientation: &alpha; = ${deviceAlpha.toFixed(2)}, &beta; = ${deviceBeta.toFixed(2)}, &gamma; = ${deviceGamma.toFixed(2)}`);
-//   }
+ 	// Do stuff with the new orientation data
+ 	setInfo(`Orientation: &alpha; = ${deviceAlpha.toFixed(2)}, &beta; = ${deviceBeta.toFixed(2)}, &gamma; = ${deviceGamma.toFixed(2)}`);
+   }
 
 /** 
  * Add a text field to the bottom left corner of the screen
